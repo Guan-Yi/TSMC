@@ -6,24 +6,24 @@ import sys
 
 def main(this_year, interval):
     
-    # Search range: [this_year - interval, interval)
+    # Search range: [this_year - interval, this year + interval)
 
     # Same January
     print("January is same as: ")
-    for y in range(this_year - interval, this_year):
+    for y in range(this_year - interval, this_year + interval):
         if datetime.date(y, 1, 1).isoweekday() == \
            datetime.date(this_year, 1, 1).isoweekday():
                print(y)
 
     # Same February
     print("February is same as: ")
-    for y in range(this_year - interval, this_year):
+    for y in range(this_year - interval, this_year + interval):
         if calendar.monthrange(this_year, 2) == calendar.monthrange(y, 2):
             print(y)
 
     # Other Months
     print("Other months are same as: ")
-    for y in range(this_year - interval, this_year):
+    for y in range(this_year - interval, this_year + interval):
         if datetime.date(y, 3, 1).isoweekday() == \
            datetime.date(this_year, 3, 1).isoweekday():
                print(y)
