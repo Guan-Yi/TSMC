@@ -4,7 +4,7 @@
 ```$ python3 tsmc.py <target year> <interval to find>```
 
 ## Example
-```$ python3 tsmc.py 2018.py 20```
+```$ python3 tsmc.py 2018 20```
 
 Result:
 
